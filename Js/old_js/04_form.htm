@@ -1,0 +1,184 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#" method="post" name="myform" onsubmit="return form_valid()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="enter name" /><br /><br />
+
+        <label for="gen">Gender</label>
+        <input type="radio" id="gen" name="gen" />Male
+        <input type="radio" id="gen" name="gen" />FeMale<br /><br />
+
+        <label for="quli">Qualefication</label>
+        <input type="checkbox" id="quli" name="c1" />10
+        <input type="checkbox" id="quli" name="c2" />12<br /><br />
+
+        <label for="city">City</label>
+        <select name="city" id="city">
+            <option value="-1">---select--</option>
+            <option value="">Surat</option>
+            <option value="">Baroda</option>
+
+        </select><br><br>
+        <label for="mno">Mobile No</label>
+        <input type="number" id="mno" name="mno" placeholder="enter mno" /><br /><br />
+
+        <input type="button" onclick="form_valid()" value="Submit" />
+    </form>
+
+
+    <script>
+        function form_valid() {
+
+            // text name
+            let name = document.myform.name.value;
+            if (name == "") {
+                alert("enter name");
+                return false;
+            } else if (!isNaN(name)) {
+                alert("enter alphabet");
+                return false;
+            }
+
+            // radio button
+            let male = document.myform.gen[0].checked;
+            let female = document.myform.gen[1].checked;
+
+            if (male == false && female == false) {
+                alert("select gender");
+                return false;
+            }
+
+            // check box
+            let c1 = document.myform.c1.checked;
+            let c2 = document.myform.c2.checked;
+            if (c1 == false && c2 == false) {
+                alert("select qualification");
+                return false;
+            }
+
+            // Selection
+            let city = document.myform.city.value;
+            if (city == -1) {
+                alert("select city");
+                return false;
+            }
+            
+            //  number
+            let mno = document.myform.mno.value;
+            if (mno == "") {
+                alert("enter number");
+                return false;
+            } else if (mno.length < 10) {
+                alert("enter number not more than 10 digit ");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+<body>
+    <form action="#" method="post" name="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="enter name" /><span>*</span><br /><br />
+
+        <label for="gen">Gender</label>
+        <input type="radio" id="gen" name="gen" />Male
+        <input type="radio" id="gen" name="gen" />FeMale<br /><br />
+
+        <label for="quli">Qualefication</label>
+        <input type="checkbox" id="quli" name="c1" />10
+        <input type="checkbox" id="quli" name="c2" />12<br /><br />
+
+        <label for="city">City</label>
+        <select name="city" id="city">
+            <option value="-1">---select--</option>
+            <option value="">Surat</option>
+            <option value="">Baroda</option>
+
+        </select><br><br>
+        <label for="mno">Mobile No</label>
+        <input type="number" id="mno" name="mno" placeholder="enter mno" /><br /><br />
+
+        <input type="button" onclick="form_valid()" value="Submit" />
+    </form>
+    <script>
+      function form_valid(){
+        var name = document.form.name.value;
+        if(name == ""){
+            alert("enter is empty")
+            // console.log(name)
+            return false
+        }else if(!isNaN(name)){
+            alert("enter alphabet")
+            return false
+        }
+        // radio r
+        var male = document.form.gen[0].checked;
+        var female = document.form.gen[1].checked;
+        if(male==false && female==false){
+            alert("select gen")
+            return false
+
+        }
+        // chechedr
+        var c1 = document.form.c1.checked;
+        var c2 = document.form.c2.checked;
+        if(c1==false && c2==false){
+            alert("select quli")
+            return false
+
+        }
+        // selecte 
+        var s1 = document.form.city.value;
+        if(s1 == -1){
+            alert("select option")
+            return false
+
+        }
+
+        // mnoi 
+        var mno = document.form.mno.value;
+        if(mno == ""){
+            alert("enter number")
+            return false;
+        } else if (mno.length < 10){
+            console.log("hi")
+            alert("enter number not mor then 10 and less 10")
+            return false
+        }
+
+
+
+       }
+
+    </script>
+
+</body>
+</html>

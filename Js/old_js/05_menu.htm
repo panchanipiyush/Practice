@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+          * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+       
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(104, 171, 233);
+            border-radius: 10px;
+        }
+
+        nav h1 {
+            margin: 10px 10px;
+            color: rgb(248, 6, 6);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li {
+            list-style-type: none;
+            font-size: 18px;
+            margin: 10px 10px;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+        .add {
+            display: none;
+        }
+        @media (max-width:576px) {
+            .menu {
+                width: 80px;
+                height: 100vh;
+                top: 45px;
+                right: -80px;
+                background-color: rgb(250, 231, 231);
+                flex-direction: column;
+                transition: 1s all ease;
+                position: fixed;
+            }
+
+            .menu li {
+                border-bottom: 1px solid black;
+               border-radius: 10px;
+            }
+
+            .nav-up {
+                right:0px;
+            }
+            .add {
+                display: block;
+            }
+        }
+    </style>
+</head>
+    <nav>
+        <h1>Logo</h1>
+        <button type="button" class="add"><i class="fa fa-bars"></i></button>
+        <ul class="menu">
+            <li><a href=" #">Home</a> </li>
+            <li><a href=" #">Home</a> </li>
+
+            <li><a href=" #">Home</a> </li>
+
+            <li><a href=" #">Home</a> </li>
+
+            <li><a href=" #">Home</a> </li>
+            <li><a href=" #">Home</a> </li>
+
+        </ul>
+    </nav>
+
+<script>
+    let btn = document.querySelector("button");
+    let menu = document.querySelector(".menu")
+
+    btn.addEventListener("click", () => {
+         menu.classList.toggle("nav-up");
+    })
+  
+</script>
+</body>
+
+</html>

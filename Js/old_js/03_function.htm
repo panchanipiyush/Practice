@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="click()">Click</button><br><br>
+    <button onclick="clickme()">Click me</button><br><br>
+    <p id="p1"></p>
+
+    <button onclick="console.log(user('parth'))">User</button><br><br>
+    <button onclick="console.log(car('Audi','Q9'))">User</button><br><br>
+
+
+    <script>
+         function click() {
+            document.write("Click");
+        }
+        function clickme() {
+            document.querySelector("#p1").innerText = "<b>Parth Parth Parth</b>"
+        }
+
+        function user(name) {
+            return `This is ${name}`;
+        }
+        function car(car,model) {
+            return `This is ${car} and my number is ${model}`;
+        }
+
+        // arrow function 
+        const Hello = ()=>{
+            return `this is parth`;
+        }
+        console.log(Hello()); 
+        const user1 = (name) => {
+             return `This is ${name}`;
+        }
+        console.log(user1('parth')); 
+
+
+    </script>
+</body>
+
+</html>

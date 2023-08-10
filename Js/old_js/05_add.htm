@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .new-btn {
+            color: brown;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <h2>parth</h2>
+    <button type="button" id="add" class="btn">Add</button>
+    <button type="button" id="remove" class="btn">Remove</button>
+    <button type="button" id="toggle" class="btn">AddRemove</button>
+    <script>
+        
+        let h2 = document.querySelector("h2");
+        let Add = document.querySelector("#add");
+        let Remove = document.querySelector("#remove");
+        let toggle = document.querySelector("#addremove");
+
+        Add.addEventListener("click", () => {
+            h2.classList.add("new-btn");
+        })
+        
+        Remove.addEventListener("click", () => {
+            h2.classList.remove("new-btn");
+        })
+
+        AddRemove.addEventListener("click", () => {
+            h2.classList.toggle("new-btn");
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!-- object
+      is physical or logical
+    
+      chair color size weight height shepe 
+      
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      const  user1={
+        name:"parth",
+        number:10,
+        city:"surat"
+      }
+        // console.log(user1);
+
+        const user = {
+            name: "parth",
+            age:1996,
+            Addr: {
+                No: 488,
+                city: "kamrej"
+            },           
+            Cname: function () {
+                return `my name is ${user.name}`;
+            },
+            cage: function () {
+                return 2022 - user.age;
+            },
+        }
+        //   console.log(user);
+        // console.log(user.name);
+        // console.log(user.Addr);
+        // console.log(user.Addr.No);
+        console.log(user.Cname());
+        console.log(user.cage());
+
+
+    </script>
+</body>
+
+</html>
